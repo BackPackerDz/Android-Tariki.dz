@@ -1,5 +1,5 @@
 # Android-Tariki.dz
-Une application Android qui utilise l'API du site Tariki.dz
+Une application Android qui utilise l'API du site <a href="http://tariki.dz/">Tariki.dz</a>
 
 N'hésitez pas à contribuer !
 
