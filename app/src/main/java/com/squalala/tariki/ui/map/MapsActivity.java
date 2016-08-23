@@ -85,7 +85,7 @@ public class MapsActivity extends BaseActivity
         ButterKnife.bind(this);
 
         if (Build.VERSION.SDK_INT >= 23) {
-           new Permission(Context con, Activity act);
+           new Permission(getApplicationContext(),MapsActivity.this);
         }
 
         final MapTileProviderBasic tileProvider = new MapTileProviderBasic(getApplicationContext());
