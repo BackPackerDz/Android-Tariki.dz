@@ -1,5 +1,5 @@
 # Android-Tariki.dz
-Une application Android qui utilise l'API du site <a href="http://tariki.dz/">Tariki.dz</a>
+Une application Android qui utilise l'API du site <a href="http://tariki.dz/">Tariki.dz</a>, pour le moment l'application affiche les évennements selon la localisation de l'utilisateur
 
 N'hésitez pas à contribuer !
 
