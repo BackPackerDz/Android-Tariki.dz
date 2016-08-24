@@ -7,3 +7,7 @@ N'hésitez pas à contribuer !
 <img src="http://image.noelshack.com/fichiers/2016/34/1471944481-screenshot-20160822-183312.png" width="350"/>
 <img src="http://image.noelshack.com/fichiers/2016/34/1471944728-screenshot-20160822-183519.png" width="350"/>
 
+
+<h2>License</h2>
+Licensed under the <a href="https://github.com/BackPackerDz/Android-Tariki.dz/blob/master/LICENSE.md">Apache License, Version 2.0</a>
+
