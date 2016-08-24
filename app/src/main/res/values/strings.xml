@@ -5,4 +5,6 @@
     <string name="title_activity_maps">@string/app_name</string>
 
     <string name="chargement_en_cours">Chargement en cours…</string>
+
+    <string name="license">Licenses</string>
 </resources>
