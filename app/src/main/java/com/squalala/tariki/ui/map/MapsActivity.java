@@ -29,6 +29,7 @@ import com.google.android.gms.location.LocationSettingsStatusCodes;
 import com.squalala.tariki.AppComponent;
 import com.squalala.tariki.BaseActivity;
 import com.squalala.tariki.Constants;
+import com.squalala.tariki.Permission;
 import com.squalala.tariki.R;
 import com.squalala.tariki.custom.RadiusMarkerClusterer;
 import com.squalala.tariki.models.Event;
@@ -69,8 +70,6 @@ import rx.functions.Func1;
 public class MapsActivity extends BaseActivity
     implements MapsView {
 
-    private final int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
-
     @BindView(R.id.map)
     MapView map;
 
@@ -97,7 +96,7 @@ public class MapsActivity extends BaseActivity
         ButterKnife.bind(this);
 
         if (Build.VERSION.SDK_INT >= 23) {
-           new Permission(getApplicationContext(),MapsActivity.this);
+           new Permission(this);
         }
 
         final MapTileProviderBasic tileProvider = new MapTileProviderBasic(getApplicationContext());

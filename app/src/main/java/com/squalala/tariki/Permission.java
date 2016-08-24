@@ -18,12 +18,10 @@ import java.util.Map;
  */
 public class Permission extends Activity {
     private final int REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS = 124;
-    Context con;
     Activity act;
 
-    public Permission(Context con, Activity act) {
+    public Permission(Activity act) {
         this.act = act;
-        this.con = con;
         checkPermissions();
     }
 
@@ -31,16 +29,16 @@ public class Permission extends Activity {
     private void checkPermissions() {
         List<String> permissions = new ArrayList<>();
         String message = "osmdroid permissions:";
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(act, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             permissions.add(android.Manifest.permission.ACCESS_FINE_LOCATION);
             message += "\nLocation to show user location.";
         }
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(act, android.Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
             permissions.add(android.Manifest.permission.WRITE_EXTERNAL_STORAGE);
             message += "\nStorage access to store map tiles.";
         }
         if (!permissions.isEmpty()) {
-            Toast.makeText(this, message, Toast.LENGTH_LONG).show();
+            Toast.makeText(act, message, Toast.LENGTH_LONG).show();
             String[] params = permissions.toArray(new String[permissions.size()]);
             requestPermissions(params, REQUEST_CODE_ASK_MULTIPLE_PERMISSIONS);
         } // else: We already have permissions, so handle as normal
@@ -64,9 +62,9 @@ public class Permission extends Activity {
                     // All Permissions Granted
                     Toast.makeText(act, "All permissions granted", Toast.LENGTH_SHORT).show();
                 } else if (location) {
-                    Toast.makeText(this, "Storage permission is required to store map tiles to reduce data usage and for offline usage.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(act, "Storage permission is required to store map tiles to reduce data usage and for offline usage.", Toast.LENGTH_LONG).show();
                 } else if (storage) {
-                    Toast.makeText(this, "Location permission is required to show the user's location on map.", Toast.LENGTH_LONG).show();
+                    Toast.makeText(act, "Location permission is required to show the user's location on map.", Toast.LENGTH_LONG).show();
                 } else { // !location && !storage case
                     // Permission Denied
                     Toast.makeText(act, "Storage permission is required to store map tiles to reduce data usage and for offline usage." +

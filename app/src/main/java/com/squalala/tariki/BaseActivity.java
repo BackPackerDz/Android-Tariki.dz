@@ -72,7 +72,7 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     private void showLicenses() {
         final Notices notices = new Notices();
-        notices.addNotice(new Notice("Tariki.dz", "http://tariki.dz/", null, new ApacheSoftwareLicense20()));
+        notices.addNotice(new Notice("Tariki.dz", "http://tariki.dz/", "Chaouki BOUKHAZANI  si.cgn@mdn.dz", new ApacheSoftwareLicense20()));
         notices.addNotice(new Notice("osmdroid", "https://github.com/osmdroid/osmdroid", null, new ApacheSoftwareLicense20()));
         notices.addNotice(new Notice("OSMBonusPack", "https://github.com/MKergall/osmbonuspack", null, new GnuLesserGeneralPublicLicense3()));
         notices.addNotice(new Notice("ButterKnife", "http://jakewharton.github.io/butterknife/", "Jake Wharton", new GnuLesserGeneralPublicLicense21()));
